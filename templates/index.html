@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="col-md-6">
+    <div class="form-group">
+        <label class="h2 mb-4">1. Select Image,</label>
+        <form method="POST" action="/upload">
+            <div class="input-group">
+                <span class="input-group-btn mb-4">
+                    <span class="btn btn-dark btn-file">
+                        Browse… <input type="file" id="imgInp">
+                    </span>
+                </span>
+                <input type="text" class="form-control" name='inputfile' readonly>
+            </div>
+            <label class="h2 mb-4">2. View and Upload.</label>
+            <img id='img-upload' class="img-fluid mb-4"/>
+            <button type="submit" class="btn btn-dark btn-file">
+                Upload
+            </button>
+        </form>
+    </div>
+    <label class="h2 mb-4">3. Predict the Object.</label>
+    <br>
+    <span class="btn btn-dark btn-file">
+            Predict
+        </span>
+</div>
+
+
+
+
+
+
+{% endblock %}
