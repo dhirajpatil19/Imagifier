@@ -2,26 +2,22 @@
 
 {% block body %}
 
-<div class="col-md-6">
+<div class="col-md-6 ">
     <div class="form-group">
-        <label class="h2 mb-4">1. Select Image,</label>
-        <form method="POST" action="/upload">
-            <div class="input-group">
-                <span class="input-group-btn mb-4">
-                    <span class="btn btn-dark btn-file">
-                        Browse… <input type="file" id="imgInp">
-                    </span>
-                </span>
-                <input type="text" class="form-control" name='inputfile' readonly>
+        <label class="h2 mb-4">1. Upload Image.</label>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" name="image" id="image">
+                <label class="custom-file-label" for="image">Select image...</label>
+              </div>
             </div>
-            <label class="h2 mb-4">2. View and Upload.</label>
-            <img id='img-upload' class="img-fluid mb-4"/>
-            <button type="submit" class="btn btn-dark btn-file">
-                Upload
-            </button>
-        </form>
+            <button type="submit" class="btn btn-dark">Upload</button>
+          </form>
     </div>
-    <label class="h2 mb-4">3. Predict the Object.</label>
+    <label class="h2 mb-4">2. Preview Image.</label>
+    
+    <label class="h2 mb-4">3. Predict Image.</label>
     <br>
     <span class="btn btn-dark btn-file">
             Predict
